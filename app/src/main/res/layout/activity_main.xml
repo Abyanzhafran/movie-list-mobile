@@ -9,9 +9,12 @@
     <Button
         android:id="@+id/btnListMovie"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="@dimen/_8sdp"
-        android:text="LIST MOVIE"
+        android:layout_height="60dp"
+        android:layout_marginHorizontal="@dimen/_10sdp"
+        android:layout_marginTop="@dimen/_50sdp"
         android:onClick="showListMovie"
-        android:textSize="@dimen/_10sdp"/>
+        android:text="WATCH LIST MOVIES"
+        android:textSize="16sp"
+        app:backgroundTint="#E91E63" />
+
 </LinearLayout>

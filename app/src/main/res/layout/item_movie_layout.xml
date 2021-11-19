@@ -26,19 +26,19 @@
             android:textStyle="bold"/>
 
         <TextView
-            android:id="@+id/txtOverview"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/_2sdp"
-            android:text="Movie Overview"
-            android:textSize="@dimen/_10ssp"/>
-
-        <TextView
             android:id="@+id/txtRelease"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/_2sdp"
             android:text="release date"
+            android:textSize="@dimen/_10ssp"/>
+
+        <TextView
+            android:id="@+id/txtOverview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_2sdp"
+            android:text="Movie Overview"
             android:textSize="@dimen/_10ssp"/>
 
     </LinearLayout>

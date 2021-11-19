@@ -37,11 +37,12 @@ public class AdapterListMovie extends RecyclerView.Adapter<AdapterListMovie.View
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
 
-        String posterPath = movieList.get(position).getPosterPath();
-        Picasso.with(context).load(posterPath).fit().centerCrop()
-                .placeholder(R.drawable.ic_launcher_background)
-                .error(R.drawable.ic_launcher_foreground)
-                .into(holder.movie);
+//        String posterPath = movieList.get(position).getPosterPath();
+//        Picasso.with(context).load(posterPath).fit().centerCrop()
+//                .placeholder(R.drawable.ic_launcher_background)
+//                .error(R.drawable.ic_launcher_foreground)
+//                .into(holder.movie);
+
         holder.txtTitle.setText(movieList.get(position).getTitle());
         holder.txtOverview.setText(movieList.get(position).getOverview());
         holder.txtRelease.setText(movieList.get(position).getReleaseDate());
@@ -51,9 +52,8 @@ public class AdapterListMovie extends RecyclerView.Adapter<AdapterListMovie.View
     @Override
     public int getItemCount() {
         return movieList.size();
-
-
     }
+
     public static class ViewHolder extends RecyclerView.ViewHolder{
 
         ImageView movie;
