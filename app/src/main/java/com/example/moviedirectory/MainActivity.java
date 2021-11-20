@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.sax.StartElementListener;
 import android.view.View;
 
 public class MainActivity extends AppCompatActivity {
@@ -15,6 +16,11 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void showListMovie(View view){
+        Intent intent = new Intent(this, ListMovieActivity.class);
+        startActivity(intent);
+    }
+
+    public void showDetailMovie(View view){
         Intent intent = new Intent(this, ListMovieActivity.class);
         startActivity(intent);
     }
