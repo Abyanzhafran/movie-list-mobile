@@ -19,7 +19,7 @@
         android:orientation="vertical">
 
         <TextView
-            android:id="@+id/txtTitle"
+            android:id="@+id/txtTitleMov"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Title"
@@ -27,7 +27,7 @@
             android:textStyle="bold"/>
 
         <TextView
-            android:id="@+id/txtRelease"
+            android:id="@+id/txtReleaseMov"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/_2sdp"
@@ -35,7 +35,7 @@
             android:textSize="@dimen/_10ssp"/>
 
         <TextView
-            android:id="@+id/txtOverview"
+            android:id="@+id/txtOverviewMov"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/_2sdp"

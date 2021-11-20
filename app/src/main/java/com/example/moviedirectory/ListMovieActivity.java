@@ -82,7 +82,7 @@ public class ListMovieActivity extends AppCompatActivity {
         try {
 
             String jsonString;
-            inputStream = getResources().openRawResource(R.raw.list_movie);
+            inputStream = getResources().openRawResource(R.raw.data_movie);
             BufferedReader bufferedReader = new BufferedReader(
                     new InputStreamReader(inputStream, StandardCharsets.UTF_8));
 

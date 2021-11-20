@@ -10,7 +10,6 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.moviedirectory.ListMovieActivity;
 import com.example.moviedirectory.Model.Movie;
 import com.example.moviedirectory.R;
 import com.squareup.picasso.Picasso;
@@ -36,16 +35,15 @@ public class AdapterListMovie extends RecyclerView.Adapter<AdapterListMovie.View
 
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
+        String posterPath = movieList.get(position).getPosterPath();
+        Picasso.with(context).load(posterPath).fit().centerCrop()
+                .placeholder(R.drawable.ic_launcher_background)
+                .error(R.drawable.ic_launcher_background)
+                .into(holder.movie);
 
-//        String posterPath = movieList.get(position).getPosterPath();
-//        Picasso.with(context).load(posterPath).fit().centerCrop()
-//                .placeholder(R.drawable.ic_launcher_background)
-//                .error(R.drawable.ic_launcher_foreground)
-//                .into(holder.movie);
-
-        holder.txtTitle.setText(movieList.get(position).getTitle());
-        holder.txtOverview.setText(movieList.get(position).getOverview());
-        holder.txtRelease.setText(movieList.get(position).getReleaseDate());
+        holder.txtTitleMov.setText(movieList.get(position).getTitle());
+        holder.txtReleaseMov.setText(movieList.get(position).getReleaseDate());
+        holder.txtOverviewMov.setText(movieList.get(position).getOverview());
 
     }
 
@@ -55,17 +53,16 @@ public class AdapterListMovie extends RecyclerView.Adapter<AdapterListMovie.View
     }
 
     public static class ViewHolder extends RecyclerView.ViewHolder{
-
         ImageView movie;
-        TextView txtTitle, txtOverview, txtRelease;
+        TextView txtTitleMov, txtOverviewMov, txtReleaseMov;
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
 
             movie = itemView.findViewById(R.id.icon);
-            txtTitle = itemView.findViewById(R.id.txtTitle);
-            txtOverview = itemView.findViewById(R.id.txtOverview);
-            txtRelease = itemView.findViewById(R.id.txtRelease);
+            txtTitleMov = itemView.findViewById(R.id.txtTitleMov);
+            txtOverviewMov = itemView.findViewById(R.id.txtOverviewMov);
+            txtReleaseMov = itemView.findViewById(R.id.txtReleaseMov);
         }
     }
 }
